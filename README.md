@@ -59,6 +59,8 @@ SMTP_USERNAME=username
 SMTP_PASSWORD=password
 ```
 
+<br>
+
 ## Email newsletter template
 
 Letter uses [Handlebars](https://handlebarsjs.com) with html extension as default templating engine. Email is generated from `letter` template inside `emails` directory. You can make it your own as you please. Templating

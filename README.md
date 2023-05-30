@@ -54,7 +54,7 @@ MAIL_FROM=Letter <letter@example.com>
 
 SMTP_HOST=smtp.gmail.com # or whatever mail service you use
 SMTP_PORT=465 # or some other
-SMTP_SECURE=true # in most cases set this to true if you are connecting to port 465. For port 587 or 25 keep it false
+SMTP_SECURE=true # in most cases set this to true if you are connecting to port 465
 
 SMTP_USERNAME=username
 SMTP_PASSWORD=password

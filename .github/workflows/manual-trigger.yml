@@ -1,0 +1,32 @@
+name: Manual trigger for Letter
+
+on: [workflow_dispatch]
+
+env:
+  LETTER_FEEDS: ${{ secrets.LETTER_FEEDS }}
+  MAIL_TO: ${{ secrets.MAIL_TO }}
+  MAIL_FROM: ${{ secrets.MAIL_FROM }}
+  SMTP_HOST: ${{ secrets.SMTP_HOST }}
+  SMTP_PORT: ${{ secrets.SMTP_PORT }}
+  SMTP_SECURE: ${{ secrets.SMTP_SECURE }}
+  SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
+  SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Checkout Letter
+        run: |
+          LATEST_RELEASE=$(curl -L -s -H 'Accept: application/json' https://github.com/radekkozak/letter/releases/latest) 
+          LATEST_VERSION=$(echo $LATEST_RELEASE | sed -e 's/.*"tag_name":"\([^"]*\)".*/\1/')
+          curl -OL "https://github.com/radekkozak/letter/releases/download/$LATEST_VERSION/letter.zip" && unzip -o letter.zip
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+      - name: Install dependencies
+        run: npm ci --ignore-scripts
+      - name: Sent Letter
+        run: npm run letter --if-present

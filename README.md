@@ -75,7 +75,7 @@ assumes the structure of `html`, `subject` and `text` html files. Here's how *le
 ### OPML file structure can be flat or nested
 
 Sometimes certain services like i.e Feedly, export OPML feeds in a nested manner. Letter supports both flat 
-and categorized notations. Even in the same file. Please see [feeds.opml.example](https://github.com/letter/rss/feeds.xml.example)
+and categorized notations. Even in the same file. Please see [feeds.opml.example](https://github.com/radekkozak/letter-template/blob/main/rss/feeds.opml.example)
 
 ### Gmail considerations
 

@@ -33,7 +33,7 @@ to have your own daily readings delivered with [Letter]("https://github.com/rade
 1. Click **Use this template** button above and create your repo from this template
 
 
-2. [Create secret variables](https://docs.github.com/en/actions/security-guides/encrypted-secrets) in your newly created repository with keys as seen [below](set-your-environment-variables)
+2. [Create secret variables](https://docs.github.com/en/actions/security-guides/encrypted-secrets) in your newly created repository with keys as seen [below](letter-environment-variables)
 
 
 3. Fill up your favorite feeds either in plain `feeds.txt` file or via `feeds.opml` (OPML file can be exported from most rss services)
@@ -41,9 +41,9 @@ to have your own daily readings delivered with [Letter]("https://github.com/rade
  
 4. _(optionally)_ Change cron time settings in `letter.yml` to your liking. By default *letter* will deliver your readings everyday at 11am UTC. You can also check if everything works as you want by triggering Github workflow via provided `manual-trigger.yml`.
    
-### Set your environment variables 
+### Letter environment variables 
 
-Below _Github Secrets_ are required for running Letter workflows
+Below _Github Secrets_ are required for running Letter
 
 ```bash
 LETTER_FEEDS=plain # plain or opml (default is plain)

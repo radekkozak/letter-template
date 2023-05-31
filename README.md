@@ -1,8 +1,8 @@
 <br>
 <p align="center">
 <picture>
-    <source media="(max-width: 640px)" srcset="https://github.com/radekkozak/letter/blob/main/assets/letter-header-slogan.svg" width="90%">
-    <img src="https://github.com/radekkozak/letter/blob/main/assets/letter-header-slogan.svg" alt="Letter header" width="50%">
+    <source media="(max-width: 640px)" srcset="https://github.com/radekkozak/letter/blob/main/assets/letter-header-dark.svg" width="90%">
+    <img src="https://github.com/radekkozak/letter/blob/main/assets/letter-header-dark.svg" alt="Letter header" width="50%">
 </picture>
 </p>
 <p align="center">

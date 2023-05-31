@@ -2,7 +2,7 @@ name: Letter workflow
 
 on:
   schedule:
-    - cron: "* 11 * * *" # everyday at 11am UTC
+    - cron: "0 11 * * *" # everyday at 11am UTC
 
 env:
   LETTER_FEEDS: ${{ secrets.LETTER_FEEDS }}
